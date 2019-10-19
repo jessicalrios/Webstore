@@ -15,14 +15,13 @@ Returns all the products stored from the database.
 **get/{id}?=_id_**
 If _id_ is found, the _id_ after ?= needs to be replaced by the actual ID stored from the database.
 
-## Video Walkthrough
+## Image Examples
 
 Here's are pictures of different ways to call the api:
 
 <img src='getId.jpeg' title='Example of how to get ID' width='' alt='Img of getID' />
 <img src='getAdd.jpeg' title='Example of how to get Add' width='' alt='Img of getAdd' />
 <img src='example.jpeg' title='Example of "example"' width='' alt='Img of Example' />
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
