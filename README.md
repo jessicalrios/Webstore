@@ -25,7 +25,7 @@ Here's are pictures of different ways to call the api:
 
 ## Notes
 For Heroku Link:
-<a href="https://cst438-webstorebackend-jessica.herokuapp.com/products/getAll">Heroku: Web Store</a>
+<a href="https://cst438-webstorebackend-jessica.herokuapp.com/products/getAll">https://cst438-webstorebackend-jessica.herokuapp.com/products/getAll</a>
 
 ## License
 
