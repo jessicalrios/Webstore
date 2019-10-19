@@ -24,7 +24,8 @@ Here's are pictures of different ways to call the api:
 <img src='example.jpeg' title='Example of "example"' width='' alt='Img of Example' />
 
 ## Notes
-
+For Heroku Link:
+<a href="https://cst438-webstorebackend-jessica.herokuapp.com/products/getAll">Heroku: Web Store</a>
 
 ## License
 
