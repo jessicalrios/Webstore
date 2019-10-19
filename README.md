@@ -7,13 +7,17 @@ Submitted by: **Jessica Rios**
 ## RESTful API
 The following web application can use the following API:
 **products/add**
+Adds products by inserting the description, imageURL, name, price, and stock.
 **products/example**
+This is a testing RESTful API to see if the api call is function correct. If it is functioning correct, then Test should be displayed.
 **products/getAll**
-**get/{id}?=_id**
+Returns all the products stored from the database.
+**get/{id}?=_id_**
+If _id_ is found, the _id_ after ?= needs to be replaced by the actual ID stored from the database.
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's are pictures of different ways to call the api:
 
 <img src='x' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
