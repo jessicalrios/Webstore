@@ -24,12 +24,13 @@ public class ProductService implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        productRepository.insert(new Product("APTAIN OBVIOUS MEN'S COSTUME", "captain.jpg", 49.99, 5,
-                "Material: 100% Polyester, Exclusive of Decorations"));
-        productRepository.insert(new Product("ADULT TROPICAL TOURIST COSTUME", "tropical.jpg", 34.99, 10,
-                "Straw hat, jumbo sunglasses, lei, sandals, and other accessories sold separately"));
-        productRepository.insert(new Product("DISNEY TOY STORY REX INFLATABLE COSTUME FOR ADULTS", "toy.jpg", 89.99, 1,
-                "Green transparent vision port in character mouth"));
+        //Title, pic, price, stock, description
+        productRepository.insert(new Product("Dozen roses", "rose.jpg", 25.99, 10,
+                "Roses are one color per bunch. (Red, White, Blue)"));
+        productRepository.insert(new Product("Purple Orchids", "orchids.jpg", 30.99, 15,
+                "Large single Orchids come in a brown vase. High quality good for gifting."));
+        productRepository.insert(new Product("Sunflowers per dozen", "sunflower.jpg", 15.99, 8,
+                "They come in orange and yellow color. Good for center pieces."));
     }
 
     public Iterable<String> example() {
