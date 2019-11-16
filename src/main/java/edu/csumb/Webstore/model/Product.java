@@ -53,4 +53,11 @@ public class Product
         return this.description;
     }
 
+    public void setStock(Integer newAmount){
+        if(newAmount < 0)
+            this.stock = 0;
+        else
+            this.stock = newAmount;
+    }
+
 }

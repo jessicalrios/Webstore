@@ -68,7 +68,6 @@ public class ProductController
     //Put and Delete will use either. They can also be compiled.
     // So IF @RequestMapping(value = "/{pathVar}", method = RequestMethod.PUT)
     //public void foo(@RequestParam dataType pathVar, @RequestBody dataType postVar)
-    // hi i was here
     @RequestMapping(value = "/products/add", method = RequestMethod.PUT)
     public void addProduct(@RequestBody Product product)
     {
