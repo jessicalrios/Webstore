@@ -51,4 +51,13 @@ public class ProductService implements CommandLineRunner{
         productRepository.insert(new Product(product.getName(), product.getImageURL(), product.getPrice(), product.getStock(), product.getDescription()));
     }
 
+    public void changeQuantity(String id, Integer amount){
+        Product product = productRepository.findById(id).get();
+        product.setStock(product.getStock() - amount);
+        productRepository.deleteById(id);
+        productRepository.insert(product);
+    }
+
+    
+
 }
