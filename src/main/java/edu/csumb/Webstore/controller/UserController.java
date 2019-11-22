@@ -25,31 +25,44 @@ public class UserController
     @Autowired
     UserService userService;
 
-    @RequestMapping(method = RequestMethod.POST, value = "/auth/checkout/")
+    @RequestMapping(method = RequestMethod.POST, value = "/auth/checkauth/")
+    @ApiOperation(value = "authenticize the user.")
     public String checkAuth(@RequestBody UserContext userContext)
     {
         return userService.checkAuth(userContext.username, userContext.password);
     }
 
+    @RequestMapping(method = RequestMethod.POST, value = "/auth/checkout/")
+    @ApiOperation(value = "Checks out the user.")
+    public void checkout(@RequestBody UserContext userContext)
+    {
+        userService.checkout(userContext.username);
+    }
+
+
     @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
+    @ApiOperation(value = "Add product in the user.")
     public void addToCard(@RequestBody CartContext cartContext)
     {
         userService.addToCard(cartContext.username, cartContext.product, cartContext.amount);
     }
 
     @RequestMapping(value = "/changeQuantity", method = RequestMethod.PUT)
+    @ApiOperation(value = "Changes the quantity in the cart")
     public void changeQuantity(@RequestBody CartContext cartContext)
     {
         userService.changeQuantity(cartContext.username, cartContext.product, cartContext.amount);
     }
 
     @RequestMapping(value = "/checkout", method = RequestMethod.PUT)
+    @ApiOperation(value = "Checks out the user.")
     public void addProduct(@RequestBody UserContext userContext)
     {
         userService.checkout(userContext.username);
     }
 
     @RequestMapping(value="/user/adduser", method=RequestMethod.POST)
+    // @ApiOperation(value = "Adding user")
     public void addUser(@RequestBody User user) {
         userService.addUser(user);
     }

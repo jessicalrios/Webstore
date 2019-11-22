@@ -62,8 +62,9 @@ public class UserService{
         else
             card.put(product, amount);
         // user.set
+        user.setCard(card);
         userRepository.deleteById(username);
-        //userRepository.insert(new User(username, user.getPassword()));
+        userRepository.insert(user);
     }
 
     public void changeQuantity(String username, String product, Integer amount){
@@ -71,13 +72,13 @@ public class UserService{
         User user = userRepository.findById(username).get();
         HashMap<String, Integer> card = user.getCard();
 
-        if( card.get(product) == 0)
+        if( card.get(product) + amount <= 0)
             card.remove(product);
         else
-            card.put(product, amount);
+            card.put(product, card.get(product) + amount);
 
             userRepository.deleteById(username);
-            //userRepository.insert(new User(username, user.getPassword(), card));
+            userRepository.insert(user);
     }
 
     public void checkout(String username){
@@ -94,7 +95,8 @@ public class UserService{
         } 
         
         userRepository.deleteById(username);
-        //userRepository.insert(new User(username, user.getPassword(), new HashMap<>()));
+        user.setCard(new HashMap<String, Integer>());
+        userRepository.insert(user);
 
     }
 
